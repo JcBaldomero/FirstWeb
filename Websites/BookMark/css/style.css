@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap');
+/*For Titles /h1 (font-family: 'Fira Sans', sans-serif;(Bold 700))*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');/*for links / link titles/ buttons(font-family: 'Fira Sans', sans-serif;(Bold 500))*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+/*For Paragraphs (font-family: 'Ubuntu', sans-serif; (light300))*/
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+text-decoration: none;
+list-style:none;
+font-family: 'Ubuntu', sans-serif;
+}
+body{
+  overflow: auto;
+}
+/* For NavBar */
+.navbar{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  #B2C3FB;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+}
+.brand-title{
+  width: 50%;
+  height: 100%;
+  margin: .5rem;
+}
+.brand-title h1{
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  display: inline;
+}
+.brand-title h1:first-child{
+  padding: 0rem .5rem;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 5px 1px rgba(121, 118, 118, 0.767);
+  background-color: white;
+  color:  #B2C3FB;
+}
+.brand-title h1:nth-child(2){
+  margin-left: .5rem;
+}
+.navbar-links ul{
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar-links li a {
+  font-size: 1rem;
+  display: block;
+  color: white;
+  transition: .5s ease-in;
+  padding: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  
+} 
+.navbar-links li:hover a:hover{
+  background-color: #6c87e1;
+  color: black;
+}
+.toggle-button{
+  display: none;
+  color: white;
+  margin-right: 1rem;
+}
+
+/* For Main Container */
+.main-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.text-container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.text-content{
+  width: 60%;
+  height: fit-content;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+.text-content h1{
+  font: 700 2.5vw 'Fira Sans', sans-serif;
+  /*shorthadn for font=(1.style 2.variant 3.weight 4.size/line-height 5.family)*/
+  line-height: 2.5rem;
+}
+.text-content h5{
+  line-height: .9rem;
+  font-size: 1rem;
+  color: rgba(128, 128, 128, 0.66);
+  margin: 2rem 0rem;
+}
+.text-content span{
+  color: black;
+}
+.buttons{
+  width: 100%;
+  font-size: 1rem;
+}
+.buttons a{
+  color: inherit;
+}
+.buttons button:first-child{
+  width: 30%;
+  height: 2rem;
+  border: none;
+  border-radius: .5rem;
+  background-color:  #B2C3FB;
+  color: white;
+  transition: .5s ease;
+}
+.buttons button:nth-child(2){
+  width: 30%;
+  height: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  border-radius: .5rem;
+  background-color: white;
+  transition: .5s ease;
+}
+.buttons button:nth-child(2):hover{
+  background-color:  #B2C3FB;
+  color: white;
+  border: none;
+}
+.buttons button:first-child:hover{
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  background-color: white;
+  color: #000
+}
+.image-container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container img{
+  width: 100%;
+  height: 80%;
+}
+
+
+
+@media (max-width:900px){
+
+  /* For Navbar  */
+  .brand-title{
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .brand-title h1:first-child{
+    padding: .5rem .8rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 5px 1px rgba(121, 118, 118, 0.767);
+    background-color: white;
+    color:  #B2C3FB;
+  }
+  .toggle-button{
+    display: inline;
+    font-size: 1.8rem;
+  }
+  .navbar-links{
+    width: 100%;
+    display: none;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul{
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li{
+    text-align: center;
+  }
+  .navbar-links li a{
+    padding: 1rem;
+  }
+  .navbar-links.active{
+    display: flex;
+  }
+
+
+/* Main container */
+.main-container{
+  height: 100vh;
+  flex-direction: column-reverse;
+  
+}
+.text-container{
+  width: 100%;  
+  padding: 0;
+  height: 50%;
+}
+.text-content{
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  margin: 0rem;
+  align-items: center;
+
+}
+.text-content h1{
+  font: 700 4.5vw 'Fira Sans', sans-serif;
+  /*shorthadn for font=(1.style 2.variant 3.weight 4.size/line-height 5.family)*/
+}
+.text-content h5{
+  line-height: 15px;
+  letter-spacing: 1px;
+  color: rgba(128, 128, 128, 0.66);
+  margin: 1rem 0rem;
+  text-align: center;
+}
+.image-container{
+  width: 100%;
+  height: 50%;
+  align-items: flex-end;
+}
+.image-container img{
+  width: 80%;
+  height: 80%;
+}
+.buttons{
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button:first-child{
+  width: 45%;
+  height: 2rem;
+  color: white;
+  margin: .5rem;
+}
+.buttons button:nth-child(2){
+  width: 45%;
+  height: 2rem;
+}
+}

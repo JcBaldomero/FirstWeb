@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  background-image: linear-gradient(to top , #434343 0%, black 100%);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;  
+  align-content: center;
+  justify-content: center;
+}
+.nav-container{ 
+  width: 100%;
+  height:100px;
+  display: flex;
+  justify-content: space-around;
+}
+.link-container, .logo, .search-container{
+    width: 33%;
+}
+.link-container{
+  display: flex;
+  align-items: center;
+}
+.link-container ul{
+  display: flex;
+  justify-content: center;
+}
+.link-container li{
+  padding: 20px;
+  font-size: 1vw;
+  letter-spacing: 1px;
+  font-family: 'Noto Sans TC', sans-serif;
+  opacity: .6;
+  transition: .7s ease-in-out;
+}
+.link-container li:hover{
+  letter-spacing: 1.5px;
+    opacity: 1;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo h1{
+  font-size: 2vw;
+  letter-spacing: 3px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: white;
+}
+.search-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+input[type=search]{
+  width: 44%;
+  height: 20px;
+  margin-right: 20px;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  transition: .7s ease-in-out;
+}
+/*this line of codes removes the x mark in the search bar*/
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button, 
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/*Gets rid of borders in search bar when clicked*/
+input:focus{
+  outline: none;
+  width: 45%;
+  height: 22px;
+}
+.search::-webkit-input-placeholder {
+  color: rgb(165, 165, 165);
+  font-size: .8vw;
+  padding-left: 5px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.text-container{
+  width: 40%;
+  height: 100px;
+  margin-top: 200px;
+  margin-left: 30px;
+}
+.text-container h1{
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-bottom: 5px;
+  font-size: 3rem;
+}
+.text-container h5{
+  font-size: .8rem;
+  color: rgba(255, 255, 255, 0.489);
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  line-height: 15px;
+  opacity: 0.5;
+}
+@media only screen and (max-width:500px){
+.logo h1{
+  font-size: 3.5vw;
+}  
+.link-container li{
+  font-size: 2vw;
+}
+input[type=search]{
+  width: 49%;
+  height:10px;
+}
+.text-container{
+  margin-top: 50px;
+  margin-left: 10px;
+}
+  .text-container h1{
+  font-size: 1rem;
+}
+.text-container h5{
+    font-size: .7rem;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    line-height: 12px;
+}
+.card-container{
+    width: 90%;
+    height: 25rem;
+    background-position:  center bottom;
+}
+}

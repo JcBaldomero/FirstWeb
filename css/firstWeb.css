@@ -1,0 +1,227 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration:none; 
+  list-style:none;
+  box-sizing: border-box;
+  color: white;  
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+  box-shadow: inset 1px 1px 5px black; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(248, 75, 12); 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:  white; 
+}
+body, html{
+  height: 100vh;
+  overflow: hidden;
+}
+.nav-container{
+  width: 100%;
+  height: auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+.logo-container{
+  margin-left:10px;
+}
+.logo-container h1, span{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 3vw;
+  letter-spacing: 1px;
+}
+.logo-container span{
+  color: rgb(248, 75, 12);
+}
+.logo-container h1 :hover{
+   color: white;
+   transition: .4s ease-in-out;
+}
+.navlink-container{
+  margin-right: 30px;
+  height: auto;
+}
+.nav-links li{
+  display: inline;
+}
+.nav-links a{
+  padding: 20px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1vw;
+  transition: .4s ease-out;
+}
+ .nav-links li a:hover{
+  color: rgb(248, 75, 12); 
+}
+.ham-container{
+  display: none;
+}
+.ham-navlink-container{
+  display: none;
+}
+.main-container{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.img-container{
+  width: 50%;  
+  display: flex;
+}
+.image{
+  display: flex;
+  justify-content: center;
+}
+.image img{
+  width: 70%;
+  height: 100%;
+}
+.image2{
+  display:none;
+}
+.intro-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.intro-text{
+  padding-left: 30px;
+}
+.intro-text h1,h2{
+  letter-spacing: 0.5px;
+  font-size: 3vw;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.intro-text h1{
+  color: rgb(248, 75, 12);
+}
+.intro-text h1{
+  font-size: 5vw;
+}
+.intro-btn button{
+  margin-top: 15px;
+  border:none;
+  border-radius: 7px;
+  width: 20%;
+  height: 29px;
+  background-color: rgb(248, 75, 12);
+  color: white;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: bold;
+  transition: .5s ease-in-out;
+}
+.intro-btn button:hover{
+  border: 1px solid rgb(248, 75, 12);
+  background-color: transparent;
+  color: white;
+}
+
+
+
+
+
+@media only screen and (max-width: 1024px){
+.nav-container{
+    justify-content: space-around;
+}
+.logo-container h1,span {
+    font-size: 6vw;
+}
+.nav-links li{
+    display: none;
+}
+.ham-container{
+    display: inline;
+    margin-top: 10px;
+}
+.ham-container h1{
+    font-size: 5vw;
+}
+.ham-navlink-container.toggleCls{
+  display: block;
+  width: 100%;
+}
+.ham-navlink-container{
+  position: relative;
+}
+.ham-nav-links{
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+.home{
+  border-top: 1px solid rgb(248, 75, 12);
+}
+.ham-nav-links li{
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px solid rgb(248, 75, 12); 
+  background-color: black;
+  width: 100%;
+}
+.ham-nav-links a{
+   font-family: 'Noto Sans TC', sans-serif;
+   font-size:3vw;
+   font-weight: bold;
+}
+.intro-container{
+  margin: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.intro-container h1{
+  font-size: 7vw;  
+  justify-self: center;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+}
+.intro-container{
+  height: 50%;
+}
+.intro-btn button{
+  width: 40%;
+  height: 1.5rem;
+  font-weight: bold;
+}
+.img-container{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  height: 50%;
+}
+.image {
+  display: none;  
+}
+.image2{
+  display: inline;
+  width: 100%;
+  margin-bottom: -1rem;
+}
+.image2 img{
+  width: 100%;
+  height: 100%;
+}
+}

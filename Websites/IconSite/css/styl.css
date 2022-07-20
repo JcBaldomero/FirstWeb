@@ -1,0 +1,372 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Oxygen', sans-serif
+}
+body{
+  background-color: rgb(11, 11, 11);
+}
+.nav{
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  color: white;
+  background-color: black;
+}
+.left-nav, .center-nav, .right-nav{
+  display: flex;  
+  align-items: center;
+}
+.ham-link{
+  display: none;
+}
+/* left part of navigation */
+.left-nav{
+  width: 15%;
+}
+.left-nav h1 {
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 2rem;
+  animation-name: left-navh1;
+  animation-duration:1.5s;
+}
+@keyframes left-navh1 {
+  0%{
+    transform: translateX(-15rem);
+    opacity:.2;
+  }
+  25%{
+    opacity: .5;  
+  }
+  50%{
+    opacity: .7;
+  }
+  100%{
+    transform: translateX(0rem);
+    opacity: 1;
+    }
+}
+.links{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+/* center of Navigation */
+.center-nav{
+  width: 75%;
+}
+.nav-links ul{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+.nav-links li,.nav-links a{
+  margin:  0rem .5rem;
+  font-family: 'Oxygen', sans-serif;
+  color: hsl(0, 3%, 67%);
+  transition: .2s ease-in-out;
+  animation-name: links;
+  animation-duration:1.3s;
+}
+@keyframes links {
+  0%{
+    transform: translateX(-35rem);
+  }
+  100%{
+    transform: translateX(0rem);
+    }
+}
+.nav-links li:first-child{
+  animation-delay: .1s;
+}
+.nav-links li:nth-child(2){
+  animation-delay: .2s;
+}
+.nav-links li:nth-child(3){
+  animation-delay: .3s;
+}
+.nav-links li:nth-child(4){
+  animation-delay: .4s;
+}
+.nav-links span{
+  color: white;
+  font-weight: bold;
+}
+.nav-links a:hover{
+  color: white;
+}
+
+
+/* Right part of navigation */
+.right-nav{
+  width:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-nav button{
+  width: 4rem;
+  height: 1.5rem;
+  padding: 0rem 0rem;
+  margin: 0rem .5rem;
+  border: none;
+  border-radius: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  transition: .5s ease-out;
+  animation-name: btns;
+  animation-duration: 1s;
+}
+.btn1{
+  color: black;
+}
+@keyframes btns{
+  0%{
+    transform: translate(5rem);
+  }
+  100%{
+    transform: translate(0rem);
+  } 
+}
+.right-nav button:first-child{
+  animation-delay: .2s;
+}
+.right-nav button:nth-child(2){
+  animation-delay: .3s;
+}
+.right-nav button:first-child:hover{
+  border: 1px solid white;
+  background-color: transparent;
+}
+.right-nav button:first-child:hover > .btn1{
+  color: white;
+}
+.right-nav button:nth-child(2){
+  border: 1px solid white;
+  background-color: transparent;
+}
+.btn2{
+  color: white;
+}
+.right-nav button:nth-child(2):hover{
+  background-color: white;
+}
+.right-nav button:nth-child(2):hover > .btn2{
+  color: black;
+}
+
+
+/* main content */
+.container{
+  width: 100%;
+  height: 600px;
+  display: flex;
+  color: white;
+}
+.text-container,.image-container{
+  width: 50%;
+  height: 100%;
+}
+/* text Container */
+.text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-container h5{
+  margin:0rem 0rem 1rem 6rem;
+  color: hsl(0, 3%, 67%);
+  font-size: clamp(.7rem, .5vw, 4rem);
+}
+.text-container h1{
+  margin-left:  6rem;
+  font-size: clamp(1rem, 2vw, 4rem);
+}
+.text-container h6{
+  color: hsl(0, 3%, 67%);
+  margin: 1rem 0rem 0rem 6rem;
+  font-size: clamp(.6rem, .7vw, 2rem);
+}
+.text-container button{
+  width:10%;
+  height: 1.7rem;
+  margin: 1rem 0rem 0rem 6rem;
+  border: none;
+  border-radius: .6rem;
+  font-size: clamp(.6rem, .6vw, 3rem);
+  font-weight: bold;
+  transition: .5s ease-in-out;
+  animation-name: txt-btn;
+  animation-duration: 1s;
+}
+@keyframes txt-btn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.text-container  a{
+  color: black;
+  transition-delay: .2s;
+}
+.text-container button:hover{
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.text-container button:hover >  a{
+  color: white
+}
+
+
+/* container 2 */
+.container2{
+  background-color: white;
+  display: flex;
+}
+.text-container2, .image-container2{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.text-container2 h1, .text-container2 h6{
+  margin:0rem 3rem 0rem 0rem ;
+  color:black;
+}
+.text-container2 h1{
+  font-size: clamp(1.1rem, 2vw, 4rem);
+}
+.text-container2 h6 {
+  margin-top: 1rem;
+  font-size: clamp(.5rem, .7vw, 2rem);
+
+}
+
+.image-container2{
+  align-items: center;
+}
+.image-container2 img{
+  width: 70%;
+}
+
+/* image-container */
+.image-container{
+  display:flex;
+  justify-content: center;
+}
+.image-container img{
+  width: 70%;
+  margin-top: 4rem;
+}
+
+
+
+
+
+@media (max-width:1000px){
+  .ham-link{
+    color: white;
+    display: inline;
+    margin-right: .5rem;
+    font-size: 1.5rem;
+  }
+   .center-nav,.right-nav{
+    display: none;
+  }
+  .left-nav h1{
+    margin-left: .5rem;
+  }
+  .left-nav{
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav{
+    flex-direction: column;
+    height: auto;
+    position: fixed;
+    top: 0;
+  }
+  .links{
+    width: 100%;
+    flex-direction: column;
+  }
+  .center-nav{
+    width: 100%;
+  }
+  .right-nav{
+    width: 100%;
+  }
+  .center-nav.active{
+    display: flex;
+    flex-direction: column;
+  }
+  .right-nav.active{
+    display: flex;
+  }
+  .center-nav ul{
+    margin-top: .5rem;
+    flex-direction: column;
+    width: 100%;
+  }
+  .center-nav li{
+    margin: 1rem;
+  }
+  .right-nav button{
+    margin: 1rem;
+  }
+  main{
+    margin-top: 1rem;
+  }
+  .container{
+    flex-direction: column;
+    height: auto;
+  }
+  .text-container{
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    padding: 4rem;
+  }
+  .text-container h5{
+    margin: 0rem 0rem .5rem 0rem;
+  }
+  .text-container h1{
+    margin-left:  0rem;
+  }
+  .text-container h6{
+    margin: .5rem 0rem 0rem 0rem;
+  }
+  .text-container button{
+    width:5rem;
+    padding: .5rem 0rem;
+    margin: 1rem 0rem 0rem 0rem;
+  }
+ 
+
+  /* text-container2 */
+  .text-container2 h1, .text-container2 h6{
+    margin:0rem 0rem 0rem 0rem ;
+    color:black;
+  }
+  .text-container2 h6 {
+    margin-top: 1rem;
+  }
+  .image-container{
+    width: 100%;
+    height: 60%;
+  }
+  .image-container img{
+    width: 65%;
+    margin: 1rem 0rem;
+  }
+}

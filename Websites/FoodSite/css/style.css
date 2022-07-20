@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@673&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration:none; 
+  list-style:none;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  width: 100%;
+  color: black;
+  overflow: auto;
+}
+header{
+  width: 100%;
+  height: 65vh;
+  background: url('../image/preparing-raw-barbeque-chicken-cooking.jpg')no-repeat center left;
+  background-size: cover;
+  color: white;
+}
+nav{
+  width: 100%;
+  height: 15%;
+}
+.navbar-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.logo-container img{
+  width: 174px;
+  height: 90px;
+  margin-left: 50px;
+}
+.nav-link-container{
+  display: flex;
+  align-items: center;
+}
+.nav-link-container li{
+  display: inline;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .7px;
+  transition: .5s ease-out;
+}
+.nav-link-container li:hover{
+  color: rgba(255, 68, 0, 0.780);
+}
+.intro-container{
+  width: 100%;
+  height: 85%;
+}
+.intro-content{
+  width: 50%;
+  float: right;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -50px;
+}
+.intro-text {
+  width: auto;
+  height: fit-content;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  letter-spacing: 1px;
+}
+.button-container{
+  width: auto;
+  height: fit-content;
+  margin-top: 10px;
+}
+input[type="button"]{  
+  border: none;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: rgba(255, 68, 0, 0.780);
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 900;
+  transition: .6s ease;
+}
+input[type="button"]:hover{
+  background-color: transparent;
+  border: 1px solid rgba(255, 68, 0, 0.780);
+  color: rgba(255, 68, 0, 0.780);
+}
+
+
+.main-container{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container1,.card-container3{
+  width: 20%;
+  height: 75%;
+  border-radius: 7px;
+  background-color: rgba(223, 221, 221, 0.16);
+  margin: 20px;
+}
+.card-container2{
+  width: 45%;
+  height: 75%;
+  border-radius: 7px;
+  background-color: rgba(223, 221, 221, 0.16);
+  display: flex;
+  align-items: center;
+}
+.card-container3{
+  display: flex;
+  flex-wrap: wrap;  
+}
+.card-text{
+  width: 100%;
+  height: 45%;
+  padding: 15px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-text2{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+.card-text h1{
+  line-height: 40px;
+  letter-spacing: 2px;
+  font-family: 'Inter', sans-serif;
+}
+.orange{
+  color: rgba(255, 68, 0, 0.780);
+  padding-bottom: 10px;
+}
+.card-text h4, .card-text2 h4, .card-text3 h4{
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.742);
+}
+.card-img{
+  width: 100%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img2{
+  width: 60%;
+  height: 100%;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img2 img{
+  width: 80%;
+  height: 50%;
+}
+.card-img3{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img3 img{
+  width: 100%;
+  height: 75%;
+}
+.card-img img{
+  width: 80%;
+  height: 100%;
+}
+
+.bottom-container{
+  width: 100%;
+  height: 600px;
+  display: flex;
+}
+.text-container{
+  width: 60%;
+  height: 100%;
+}
+.text-container h1{
+  margin: 20px 25px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1.5px;
+}
+.text-container span{
+  color: rgba(255, 68, 0, 0.699) ;
+}
+.text-container h4{
+  color: rgba(0, 0, 0, 0.667);
+  margin: 25px;
+  line-height: 25px;
+}
+.line{
+  width: 80%;
+  height: 1px;
+  border-bottom:4px solid rgba(255, 68, 0, 0.780);
+  margin: 25px;
+  visibility: hidden;
+}
+.text-hidden{
+  display: none;
+}
+.text-hover:hover ~.line{
+  visibility: visible;
+}
+.text-hover:hover~.text-hidden{
+  display: inline;
+}
+
+.image-container{
+  width: 40%;
+  height: 100%;
+  background: url(../image/vippng.com-pastry-chef-png-3059542.png) no-repeat 80% ;
+  background-size: contain;
+  display: flex;
+}
+.social-container, .kitchen{
+  width: 50%;
+  height: 100%;
+}
+.social-logo-container{
+  width: 40px;
+  height: 40px;
+  border-radius:50%;
+  background-color: rgba(255, 68, 0, 0.845);
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: .6s ease-in;
+}
+.social-logo-container img{
+  width: 29px;
+  height: 29px;
+}
+.hidden{
+  display: none;
+}
+.social-logo-container:hover{
+  width: 150px;
+  justify-content: space-evenly;
+  border-radius: 30px;
+}
+.social-logo-container:hover>img{
+  margin-left: 7px;
+}
+.social-logo-container:hover>.hidden{
+  display: inline;
+  margin-right: 10px;
+} 
+.kitchen{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.kitchen img{
+  width: 100px;
+  height: 100px;
+  margin-top: -230px;
+  margin-right: 40px;
+}
+@media only screen and (max-width: 1024px){
+  /* navbar*/
+header{
+  height: 25vh;
+}
+nav{
+  height: 5vh;
+  
+}
+.logo-container{
+  width: 40%;
+  height: 100%;
+}
+.logo-container img{
+  width: 50%;
+  height: 70%;
+  margin-left: 10px;
+}
+.nav-link-container{
+  width: 70%;
+}
+.nav-link-container ul{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.nav-link-container li{
+  display: inline;
+  font-size: 1.8vw;
+  padding: 10px;
+}
+.intro-container{
+  width: 100%;
+  height: 100%;
+}
+.intro-content{
+  width: 45%;
+  height: 20vh;
+  margin-top: 0px;
+}
+.intro-text {
+  width: 80%;
+  height: 100%;
+  font-size: 1vw;
+  letter-spacing: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.button-container{
+  width: 80%;
+  height: 15%;
+  margin: 5px 0px 0px 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+input[type="button"]{  
+  border-radius: 3px;
+  font-size: 1.5vw;
+  padding: 0px;
+  margin: 0px 5px 0px 0px;
+  letter-spacing: 0px;
+  width: 50%;
+  height: 50%;
+}
+
+
+
+/*Main Container styles*/
+.main-container{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.card-container1{
+  width: 100%;
+  height: 25%;
+  border-radius: 4px;
+  margin: 5px;
+  display: flex;
+}
+.card-container2{
+  width: 100%;
+  height: 45%;
+  margin: 5px;
+
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.card-container3{
+  width: 100%;
+  height: 25%;
+  border-radius: 4px;
+  margin: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.card-text, .card-text3{
+  width: 100%;
+  height: 100%;
+  padding-left:20%;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.card-text3{
+  padding:0px 0px 0px 0px ;
+}
+.card-text h1, .card-text2 h1, .card-text3 h1{
+  font-size: 3vw;
+  line-height: 10px;
+  letter-spacing: 0px;
+}
+.orange{
+  padding-bottom: 10px;
+}
+.card-text h4, .card-text2 h4, .card-text3 h4{
+  font-weight: lighter;
+  font-size: 2.5vw;
+  letter-spacing: 0px;
+  line-height: 10px;
+}
+.card-img{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.card-img2{
+  width: 60%;
+  height: 100%;
+}
+.card-img3{
+  width: 100%;
+  height: 100%;
+}
+.card-img img{
+  width: 75%;
+  height: 75%;
+}
+.card-img2 img{
+  width: 70%;
+  height: 45%;
+}
+.card-img3 img{
+  width: 70%;
+  height: 60%;
+}
+
+
+/*bottom container styles*/
+.bottom-container{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.text-container{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.text-container h1{
+  margin: 0px 0px;
+  font-size: 1.4rem;
+  letter-spacing: 0px;
+}
+.text-container h4{
+  margin: 0px;
+  line-height: 20px;
+  font-size: .6rem;
+}
+.line{
+  margin: 0px;
+}
+.text-hover:hover ~.line{
+  visibility: hidden;
+}
+.text-hover:hover~.text-hidden{
+  display: inline;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.726);
+  margin-top: 5px;
+}
+.image-container{
+  width: 100%;
+  height: 70%;
+  background: url(../image/vippng.com-pastry-chef-png-3059542.png) no-repeat 100% ;
+  background-size:contain;
+}
+.social-logo-container{
+  width: 25px;
+  height: 25px;
+  transition: 1s ease;
+}
+.social-logo-container img{
+  width: 15px;
+  height: 15px;
+}
+.kitchen{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.kitchen img{
+  width: 70px;
+  height: 70px;
+  margin-top: -150px;
+  margin-right: 30px;
+}
+
+}

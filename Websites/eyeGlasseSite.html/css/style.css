@@ -1,0 +1,599 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  overflow: auto;
+  background-color: hsla(0, 0%, 100%, 1);
+}
+nav{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: hsla(0, 0%, 100%, 1);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+.left-nav{
+  width: 50%;
+  display: flex;
+}
+.logo-container{
+  display: flex;
+  align-items: center;
+}
+.logo-container h1{
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-left: .5rem;
+  font-size: clamp(1rem, 2vw, 2rem); 
+  /* clamp(min, val, max) */
+}
+.nav-link-container{
+  display: flex;
+  align-items: center;
+  margin-left:1.5rem;
+}
+
+.nav-link-container li,a{
+  display: inline;
+  font-family: 'Noto Sans TC', sans-serif;
+  padding: 10px;
+  color: black;
+}
+.nav-link-container a:hover{
+  color: rgba(0, 0, 0, 0.55);
+}
+.icon-container{
+  display: flex;
+  align-items: center;
+}
+.icon-container img{
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+
+/* main */
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+.hamburger-container,.ham-container{
+  display: none;
+  font-size: clamp(1rem, 2vw, 2rem); 
+}
+.intro-container{
+  width: 95%;
+  height: 30rem;
+  background-color: black;
+  border-radius: 20px;
+  box-shadow:5px 5px 15px grey;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.intro-text{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.intro-text h1,h5{
+  color: white;
+}
+.intro-text h1{
+  padding-bottom: 10px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1.8vw;
+}
+.intro-text h5{
+  padding-bottom: 10px;
+  font-size: .8vw;
+}
+.intro-text button{
+  width: 5rem;
+  font-size: .7vw;
+  padding: .4rem;
+  color: white;
+  background-color: #4A448C;
+  border: none;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: bolder;
+  transition: .3s ease-in-out;
+}
+.intro-text button:hover{
+  width: 5.5rem;
+  font-size: vw;
+  color: black;
+}
+ button{
+  outline: none;
+}
+.intro-img-container{
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content:center;
+  align-items: flex-end;
+}
+.intro-img-container img{
+  width: 50%;
+  height:95%;
+  margin-bottom: -31px;
+}
+.test-container{
+  width: 95%;
+  height: 40rem;
+  margin-top:4rem;
+  box-shadow:5px 5px 15px grey;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+.test-text{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10rem;
+}
+.test-text h1{
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-bottom: 20px;
+  font-size: 2.5vw;
+}
+.test-text button{
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  font-size: clamp(.3rem, 2rem, 1vw); 
+  /* clamp(min, val, max) */
+  border:1px solid #9494946d;
+  margin-right:17rem;
+  background-color: transparent;
+  transition: .3s ease-in-out;
+  padding: .5rem;
+}
+.test-text button:hover{
+  border: 1px solid black;
+}
+.test-img-container{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.test-img-container img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* product */
+.product-container{
+  width: 95%;
+  height:400px;
+  margin-top:80px;
+  display: flex;
+  flex-direction: column;
+}
+.product-container h1{
+  text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.product-img-container{
+  width: 100%;
+  height: 90%; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.product-img{
+  width: 20%;
+  height: 80%;
+  margin: 80px;
+}
+.product-img img{
+  width: 100%;
+  height: 70%;
+  margin-bottom: 30px;
+}
+.product-description-container{
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  transition: .5s ease;
+}
+.product-description-container:hover{
+  background-color: rgba(0, 0, 0, 0.667);
+}
+.description-container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: .5rem;
+}
+.description-container h3{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(1rem, 1vw, 2rem); 
+  /* clamp(min, val, max) */
+}
+.description-container h4{
+  opacity: 0.7;
+}
+.button-container{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-container button{
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: white;
+  transition: 1s ease;
+}
+.button-container button:hover{
+  transform: rotate(2turn);
+}
+.button-container img{
+  margin-top: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* contact us */
+.contact-container{
+  width: 95%;
+  height: 450px;
+  border:2px solid black;
+  border-radius: 10px;
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: row;
+}
+.contact-img-container{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-img-container img{
+  width: 95%;
+  height: 90%;
+  margin-left: 20px;
+  background-color: black;
+  border-radius: 10px;
+}
+.contact-text-container{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.contact-text{
+  width: fit-content;
+  height: fit-content;
+  margin-left: 90px;
+}
+.contact-text h1{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 3vw;
+}
+.contact-icon-container{
+  margin-top: 20px;
+}
+.contact-icon-container img{
+  width: 40px;
+  height: 30px;
+  margin: 10px 5px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1024px){
+nav{  
+  position: fixed;
+  width: 100%;
+}
+.left-nav{
+  width: 33%;
+}
+.logo-container{
+  margin: 0;
+}
+.logo-container h1{
+  font-size: 5vw;
+}
+.icon-container{
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
+}
+.icon-container img{
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+}
+.nav-link-container{
+  display: none;
+}
+.ham-container{
+  width: 33%;
+  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.hamburger-container.toggleCls{
+  display: block;
+}
+.ham-nav-links{
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 6%;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.ham-nav-links li{
+  text-align: center;
+  padding: 8px;
+  border-bottom:1px solid rgba(132, 130, 130, 0.167); 
+  background-color: rgba(255, 255, 255, 0.879);
+  width: 100%;
+}
+
+/* intro */
+.intro-container{
+  width: 95%;
+  height: 20rem;
+}
+.intro-text{
+  width: 50%;
+}
+.intro-text h1{
+  font-size: 3vw;
+  word-spacing: 0px;
+  line-height: 1.3rem;
+}
+.intro-text h5{
+  color: rgba(255, 255, 255, 0.411);
+  padding-bottom: 10px;
+  font-size: 2vw;
+}
+.intro-text button{
+  font-size: .7rem;
+}
+.intro-img-container{
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.intro-img-container img{
+  width: 50%;
+  height:95%;
+  margin-bottom: -1.2rem;
+}
+
+/* Test */
+.test-container{
+  width: 95%;
+  height: 35rem;
+  margin-top:2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: none;
+}
+.test-text{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+}
+.test-text h1{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 5vw;
+}
+.test-text button{
+  width: auto;
+  height: auto;
+  padding: .2rem 1rem;
+  font-size: 3vw;
+  margin-right:0rem;
+}
+.test-text button:hover{
+  width: auto;
+  height: auto;
+  font-size: 3vw;
+}
+.test-img-container{
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+}
+.test-img-container img{
+  width: 80%;
+  height: 100%;
+  margin-bottom: -1.2rem;
+}
+
+
+/* product */
+.product-container{
+  width: 95%;
+  height: auto;
+  margin-top:6rem;
+  flex-direction: column;
+}
+.product-text{
+  position: relative;
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+.product-container h1::after{
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  bottom: 0;
+  right: 10%;
+  background-color: rgba(0, 0, 0, 0.085);
+}
+.product-img-container{
+  flex-direction: column;
+}
+.product-img{
+  width:100%;
+  height:fit-content;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-img img{
+  width: 50%;
+  height: 50%;
+  margin-bottom: 0;
+}
+.product-description-container{
+  width:70%;
+  height:60px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  transition: .5s ease;
+}
+.product-description-container:hover{
+  background-color: rgba(0, 0, 0, 0.667);
+}
+.description-container{
+  width: 80%;
+}
+.description-container h3{
+  font-family: 'Noto Sans TC', sans-serif;
+  padding-left: 10px;
+  margin-top: 7px;
+}
+.description-container h4{
+  opacity: 0.7;
+  padding-left: 10px;
+}
+.button-container{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-container button{
+  width: 30px;
+  height: 28px;
+  border: none;
+  background-color: white;
+  transition: .5s ease;
+}
+.button-container button:hover{
+  background-color: grey;  
+}
+
+.button-container img{
+  margin-top: 2px;
+  width: 90%;
+  height: 90%;
+}
+.contact-container{
+  width: 95%;
+  border:2px solid black;
+  border-radius: 10px;
+  margin: 80px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.contact-img-container{
+  width: 100%;
+  height: 50%;  
+  justify-content: center;
+}
+.contact-img-container img{
+  width: 90%;
+  height: 90%;
+  margin-left: 0px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.contact-text-container{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.contact-text{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  text-align: center;
+}
+.contact-text h1{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 5vw;
+}
+.contact-icon-container{
+  margin-top: 10px;
+}
+.contact-icon-container img{
+  width: 35px;
+  height: 30px;
+  margin: 0px 5px;
+}
+}

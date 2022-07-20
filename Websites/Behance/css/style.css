@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@673&display=swap');
+
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none; 
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+button, a, img, li {
+  cursor: pointer;
+}
+.navbar{
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  background-color: black;
+}
+.brand-title{
+  width:20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.brand-title h1, a{
+  font-size: 2vw;
+  margin: .5rem;
+  color: white;
+}
+.navbar-links{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  transition: .4s ease-in;
+}
+.links{
+  width: 40%;
+  height: 100%; 
+  transition: .3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.links li, .links a{
+  color: rgba(245, 242, 242, 0.699);
+  font-size: 1vw;
+  padding: 0rem .5rem;
+} 
+.links strong{
+  color:  white;
+}
+.links li:hover, .links a:hover, .links strong:hover{
+  color: #555;
+}
+.btn{
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.btn p{
+  color: white;
+  margin: 0rem .6rem;
+}
+.sign{
+  border: none;
+  border-radius: 1rem;
+  width: 4.5rem;
+  height: 2rem;
+  margin-left:.5rem;
+  color: white;
+  background-color: hsl(214, 100%, 51%);
+  font-weight: bolder;
+  transition: .3s ease-in-out;
+}
+.sign:hover{
+  background-color: hsl(227, 89%, 49%);
+}
+.img1,.img2,.img3{
+  width: 2rem;
+  height: 2rem;
+  margin-right:.5rem;
+  border-radius: 50%;
+  border: none;
+  transition: 2s ease-in-out;
+}
+.img1{
+  transition: 2.5s ease-in-out;
+}
+:is(.img1):hover{
+  filter: hue-rotate(360deg);
+}
+button:is(.img2,.img3):hover{
+  transform: rotate(5turn);
+}
+
+.img1{
+  background: url(../image/GoogleLogo.png)no-repeat center;
+  background-size: contain;
+}
+.img2{
+  background:  url(../image/youtube.png)no-repeat center;
+  background-size: contain;
+}
+.img3{
+  background: url(../image/facebook.png)no-repeat center;
+  background-size:2.5rem;
+}
+.toggle-button{
+  display: none;
+  color: white;
+  margin-right: 1rem;
+}
+.left-link{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.left-link h4, .left-link a{
+    color: white;
+    font-size: .9vw;
+}
+.left-link h6:hover{
+  color: grey;
+}
+.search-bar{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: .5rem;
+}
+.search-bar input{
+  border: none;
+  width: 20%;
+  height: 50%;
+  border-radius:10px;
+  margin-right: .5rem;
+  background:transparent url(../image/searchIcon.png)no-repeat 50% center;
+  background-size: contain;
+  transition: .8s ease;
+  outline: none;
+  font-size: 1vw;
+}
+.search-bar input:hover{
+  width: 100%;
+  height: 60%;
+  background:white url(../image/searchIcon\(black\).png) no-repeat 95% center;
+  background-size: contain;
+}
+.left-link img{
+  width: 2rem;
+  margin:0rem 1rem;
+  transition: 1s ease-in-out;
+}
+.left-link img:hover{
+  transform: scale(-1) translate(-20%, 30%); 
+}
+/* Main contents */
+.top-content{
+  width: 100%;
+  height: 15vh;
+  display: flex;
+}
+.button-links{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-links button{
+  width: 9rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: .3rem;
+  margin:1rem 1rem;
+  transition: 2.5s ease;
+  background-color: teal;
+}
+.button-links button:hover{
+  filter: hue-rotate(360deg);
+}
+.button-links a{
+  color:white;
+  font:bolder .8rem 'Inter', sans-serif;
+}
+.ilus{
+  background: url(../image/pexels-johannes-plenio-1103970.jpg) no-repeat center 20%;
+  background-size: cover;
+}
+.Lightroom{
+  background: url(../image/pexels-akwice-3094799.jpg) no-repeat 50% 10%;
+  background-size: cover;
+}
+.Photoshop{
+  background: url(../image/pexels-bryan-gomes-3977529.jpg) no-repeat center top;
+  background-size: cover;
+}
+.Photoshop a{
+  color: black;
+}
+.Behance{
+  background: url(../image/pexels-designecologist-887349.jpg) no-repeat center 20%;
+  background-size: cover;
+}
+.Graphic{
+  background: url(../image/pexels-mason-cook-2091399.jpg) no-repeat center center;
+  background-size: cover;
+}
+.Photography{
+  background: url(../image/pexels-enric-cruz-lópez-6039184.jpg) no-repeat center center;
+  background-size: cover;
+}
+.Photography a{
+  color: black;
+  background-color: rgba(255, 255, 255, 0.186);
+}
+
+/* Page title */
+.title-text{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0rem;
+}
+.title-text h1{
+  font-size: 4vw;
+}
+.title-text h6{
+  color: rgba(0, 0, 0, 0.468);
+}
+
+
+
+/* Gallery */
+.gallery{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
+}
+.item{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  
+}
+.item img {
+  width: 85%;
+  height: 90%;
+  object-fit: cover;
+}
+.item-content{
+  width: 85%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+.item-content img{
+  width: 15%;
+  height: 80%;
+  object-fit: contain;
+}
+.item-content h5{
+  color: rgba(0, 0, 0, 0.468);
+  font-size: 1rem;
+}
+.left-cont{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.right-cont{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.googleLogo,.fblogo{
+  transition: 1s ease-in;
+}
+.right-cont img:hover{
+  filter: hue-rotate(360deg);
+}
+
+/* Footer Section */
+.footer{
+  width: 100%;
+  display: flex;
+  background-color: hsl(0, 5%, 5%);
+}
+.footer-columns{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.footer-columns h5{
+  color: hsla(0, 7%, 91%, 0.575);
+  font-size: .7rem;
+}
+.footer-columns h4,h2{
+  color: hsla(0, 10%, 91%, 0.750);
+}
+
+/* column1 */
+.footer-logo{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.footer-logo img{
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: .5rem;
+}
+.footer-text{
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: .5rem 0rem;
+}
+.lnheight{
+  line-height: 1.4rem;
+}
+.footer-text h5{
+  font-size:  1.rem;
+}
+/* column234 */
+:is(.column2,.column3, .column4){
+  padding-top: 3rem;
+}
+/* column3 */
+.footer-input{
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
+}
+.footer-input :is(input){
+  border: none;
+  outline: none;
+  padding: .2rem 0rem;
+  margin: .5rem 0rem;
+  border-radius: .2rem;
+  background-color: inherit;
+}
+input::placeholder{
+    color: white;
+}
+input:focus{
+  background-color: hsl(0, 5%, 70%);
+}
+/* column4 */
+.column4{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.column4 img{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  margin: 0rem .5rem;
+}
+
+
+
+
+@media (max-width:600px){
+  .gallery{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width:850px)and (min-width:601px) {
+  .gallery{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width:970px){
+  .navbar{
+    height: auto;
+    position: absolute;
+    top: 0;
+  }
+  .brand-title{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .brand-title h1{
+    font-size: 6vw;
+  }
+  .toggle-button{
+    display: inline;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .navbar-links{
+    width: 100%;
+    display: none;
+  }
+  .links{
+    width: 100%;
+  }
+  .links li, .links a{
+    font-size: 3.5vw;
+    padding: 1rem;
+  }
+  .navbar{
+    flex-direction: column;
+  }
+  .navbar-links ul{
+    width: 100%;
+    flex-direction: column;
+  }
+  .btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+  }
+  .links li .links a{
+    padding: 1rem;
+  }
+  .navbar-links.active{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+  
+  .sign{
+    width: 5rem;
+    height: 1.5rem;    
+  }
+  .btn{
+    padding:0rem 0rem .5rem 0rem;
+  }
+  .img1,.img2,.img3{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right:.5rem;
+  }
+  .btn p{
+    margin: 0rem .5rem;
+  }
+  .left-link{
+    width: 100%;
+    justify-content: center;
+  }
+  .search-bar{
+    width: 30%;
+    padding: .5rem 0rem;
+  }
+  .search-bar input{
+    width: 60%;
+    padding: .3rem 0rem;
+    background:white url(../image/searchIcon\(black\).png)no-repeat  95% center;
+    background-size: contain;
+  }
+  .search-bar input:hover{
+    width: 60%;
+    background:white url(../image/searchIcon\(black\).png) no-repeat 85% center;
+    background-size: contain;
+  }
+  .left-link{
+    margin: .5rem 0rem;
+  }
+  .left-link h4{
+    font-size: 2.5vw;
+  }
+
+  /* Main content */
+  .top-content{
+    margin-top: 6rem;
+    height:auto;
+  }
+  .button-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .title-text h1{
+    font-size: 2.5rem;
+  }
+  /* gallery */
+  .item-content img{
+    width:20%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .item-content h5{
+    font-size: .8rem;
+  }
+  .left-cont{
+    width: 50%;
+  }
+  .right-cont{
+    width: 50%;
+  }
+
+  /* footer */
+  .footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-columns{
+    width: 50%;
+    padding: 0rem;
+  }
+  .footer-columns h5{
+    color: hsla(0, 7%, 91%, 0.575);
+    font-size: .7rem;
+  }
+  .footer-columns h4,h2{
+    font-size: 1.3rem;
+  }
+
+  :is(.column2,.column3, .column4){
+    padding:1.2rem 0rem;
+  }
+  .footer-logo{
+    display: flex;
+    align-items: center;
+  }
+  .footer-logo img{
+    width: 2rem;
+    height: 2rem;
+  }
+  .footer-text{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lnheight{
+    line-height: 1.1rem;
+  }
+  .footer-text h5{
+    font-size:  1.rem;
+  }
+
+  .column4{
+    align-items: center;
+  }
+}
